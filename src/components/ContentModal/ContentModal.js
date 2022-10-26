@@ -62,7 +62,7 @@ function ContentModal({ children, media_type, id }) {
     useEffect(() => {
         fetchData()
         fetchVideo()
-    }, [])
+    }, [id, media_type])
 
     return (
         <>
