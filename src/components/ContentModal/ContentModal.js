@@ -50,10 +50,9 @@ function ContentModal({ children, media_type, id }) {
             `https://api.themoviedb.org/3/${media_type}/${id}?api_key=033f874c1d083b7205fde0c0bb83e3ef&language=en-US`
         )
         
-        console.log(data);
         setContent(data)
     }
-    
+
     const fetchVideo = async () => {
         const { data } = await axios.get(
             `https://api.themoviedb.org/3/${media_type}/${id}/videos?api_key=033f874c1d083b7205fde0c0bb83e3ef&language=en-US`
