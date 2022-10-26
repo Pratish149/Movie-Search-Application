@@ -35,6 +35,8 @@ function ContentModal({ children, media_type, id }) {
     const [content, setContent] = useState([]);
     const [video, setVideo] = useState();
 
+
+
     const handleOpen = () => {
         setOpen(true);
     };
@@ -47,10 +49,11 @@ function ContentModal({ children, media_type, id }) {
         const { data } = await axios.get(
             `https://api.themoviedb.org/3/${media_type}/${id}?api_key=033f874c1d083b7205fde0c0bb83e3ef&language=en-US`
         )
-
+        
+        console.log(data);
         setContent(data)
     }
-
+    
     const fetchVideo = async () => {
         const { data } = await axios.get(
             `https://api.themoviedb.org/3/${media_type}/${id}/videos?api_key=033f874c1d083b7205fde0c0bb83e3ef&language=en-US`
@@ -62,7 +65,7 @@ function ContentModal({ children, media_type, id }) {
     useEffect(() => {
         fetchData()
         fetchVideo()
-    }, [id, media_type])
+    }, [])
 
     return (
         <>
