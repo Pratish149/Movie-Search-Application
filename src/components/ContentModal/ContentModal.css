@@ -44,6 +44,7 @@
 .contentModal_title {
     height: 12%;
     font-size: min(6vw, 28px);
+    font-weight: 400;
     display: flex;
     justify-content: center;
     align-items: center;
