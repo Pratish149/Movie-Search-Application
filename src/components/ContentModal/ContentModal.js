@@ -108,21 +108,23 @@ function ContentModal({ children, media_type, id }) {
                                         <i className='tagline'>{content.tagline}</i>
                                     )}
                                     <span className='contentModal_description'>{content.overview}</span>
-                                    {content.vote_average && (
-                                        <span className='contentModal_list'><b>Rating: </b>{content.vote_average.toFixed(1)}</span>
-                                    )}
-                                    {content.release_date && (
-                                        <span className='contentModal_list'><b>Release Date: </b>{content.release_date}</span>
-                                    )}
-                                    {content.genres && content.genres.length > 0 && (
-                                        <span className='contentModal_list'><b>Genres: </b>{content.genres.map((c) => c.name).join(', ')}</span>
-                                    )}
-                                    {content.created_by && content.created_by.length > 0 && (
-                                        <span className='contentModal_list'><b>Created By: </b>{content.created_by.map((c) => c.name).join(', ')}</span>
-                                    )}
-                                    {content.production_companies && content.production_companies.length > 0 && (
-                                        <span className='contentModal_list'><b>Production Companies: </b>{content.production_companies.map((c) => c.name).join(', ')}</span>
-                                    )}
+                                   <div className='contentModal_details'>
+                                        {content.vote_average && (
+                                            <span className='contentModal_list'><b>Rating: </b>{content.vote_average.toFixed(1)}</span>
+                                        )}
+                                        {content.release_date && (
+                                            <span className='contentModal_list'><b>Release Date: </b>{content.release_date}</span>
+                                        )}
+                                        {content.genres && content.genres.length > 0 && (
+                                            <span className='contentModal_list'><b>Genres: </b>{content.genres.map((c) => c.name).join(', ')}</span>
+                                        )}
+                                        {content.created_by && content.created_by.length > 0 && (
+                                            <span className='contentModal_list'><b>Created By: </b>{content.created_by.map((c) => c.name).join(', ')}</span>
+                                        )}
+                                        {content.production_companies && content.production_companies.length > 0 && (
+                                            <span className='contentModal_list'><b>Production Companies: </b>{content.production_companies.map((c) => c.name).join(', ')}</span>
+                                        )}
+                                    </div>
                                     <div>
                                         <Carousel media_type={media_type} id={id} />
                                     </div>

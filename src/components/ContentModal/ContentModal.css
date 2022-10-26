@@ -12,8 +12,9 @@
 }
 
 .tagline {
-    padding-bottom: 10px;
+    padding-bottom: 15px;
     align-self: center;
+    font-size: 14px;
 }
 
 .contentModal {
@@ -42,7 +43,7 @@
 
 .contentModal_title {
     height: 12%;
-    font-size: 4vw;
+    font-size: min(6vw, 28px);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -67,6 +68,13 @@
 
 .contentModal_list {
     padding: 5px 5px;
+    font-size: 14px;
+}
+
+.contentModal_details{
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
 }
 
 @media (min-width: 835px) {
@@ -92,7 +100,7 @@
     }
 
     .contentModal_title {
-        font-size: 2.7vw;
+        font-size: max(2.7vw, 40px);
     }
 
     .contentModal_description {
@@ -100,6 +108,10 @@
     }
 
     .contentModal_list {
-        font-size: 20px;
+        font-size: 18px;
+    }
+
+    .tagline{
+        font-size: 18px;
     }
 }
